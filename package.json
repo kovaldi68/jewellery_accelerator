@@ -1,8 +1,7 @@
 {
   "name": "accelerator-project",
   "version": "1.0.0",
-  "description": "Макет сайта на третьем этапе Акселератора",
-  "eslintIgnore": ["mask.js"],
+  "description": "Макет сайта Jewellery на третьем этапе Акселератора",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
