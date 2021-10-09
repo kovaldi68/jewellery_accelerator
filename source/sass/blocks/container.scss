@@ -4,12 +4,12 @@
   padding: 0 50px;
 
   @media (max-width: $tablet-width-max) {
-    max-width: 1023px;
+    max-width: $tablet-width-max;
     padding: 0 45px;
   }
 
   @media (max-width: $mobile-width-max) {
-    max-width: 767px;
+    max-width: $mobile-width-max;
     padding: 0 15px;
   }
 }
