@@ -1,0 +1,14 @@
+.user-nav {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-nav__item {
+  margin-top: 15px;
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
