@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 44px;
+  width: 100%;
   font-size: 14px;
   line-height: 21px;
 }
@@ -13,5 +14,33 @@
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.main-nav__link {
+  color: $black-main;
+}
+
+@media (max-width: $tablet-width-max) {
+  .main-nav {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 36px;
+    color: $white-basic;
+  }
+
+  .main-nav__item {
+    margin-right: 0;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .main-nav__link {
+    color: $white-basic;
   }
 }

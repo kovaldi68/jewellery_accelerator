@@ -1,0 +1,33 @@
+.subscribe {
+  h2 {
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: $cormorant;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    line-height: 21px;
+    color: $grey-main;
+  }
+}
+
+.subscribe__input-wrapper {
+  input {
+    padding: 12px;
+    padding-left: 0;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 21px;
+      color: $grey-main;
+    }
+  }
+}

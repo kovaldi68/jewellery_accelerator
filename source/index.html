@@ -20,32 +20,57 @@
 <body class='page-body'>
   <header class='page-header page-header--nojs'>
     <div class="page-header__container container">
+      <button class='page-header__toggle' type='button' aria-label='Открыть или закрыть меню'></button>
       <div class='page-header__search-wrapper'>
         <svg class='page-header__search-icon' width='14' height='14' aria-label='Иконка поиска'>
           <use xlink:href='img/sprite.svg#search-icon'>
           </use>
         </svg>
         <input type='text' name='search-input' id='search-input' placeholder='Type here to search'>
-        <label for='search-input'></label>
+        <label class='visually-hidden' for='search-input'>Поиск</label>
       </div>
       <a class='page-header__logo' href=''>
         <img src='img/logo.svg' alt='Логотип магазина' width='66' height='66'>
       </a>
-      <ul class='page-header__user-nav user-nav'>
-        <li class='user-nav__item'>Login</li>
-        <li class='user-nav__item'>Cart <span>0</span></li>
+      <a class='page-header__logo page-header__logo--white' href=''>
+        <img src='img/logo-white.svg' alt='Логотип магазина' width='66' height='66'>
+      </a>
+      <a class='page-header__user-link page-header__user-link--login' href='#'>Login</a>
+      <a class='page-header__user-link page-header__user-link--cart' href='#'>
+        <span>Cart 0</span>
+        <svg class='page-header__basket-icon' width='18' height='16' aria-label='Иконка корзины'>
+          <use xlink:href='img/sprite.svg#basket-icon'>
+          </use>
+        </svg>
+      </a>
       </ul>
       <ul class='page-header__main-nav main-nav'>
-        <li class="main-nav__item">What’s new</li>
-        <li class="main-nav__item">Chokers</li>
-        <li class="main-nav__item">Necklaces</li>
-        <li class="main-nav__item">Rings</li>
-        <li class="main-nav__item">Earrings</li>
+        <li class="main-nav__item">
+          <a class='main-nav__link' href='#'>What’s new</a>
+        </li>
+        <li class="main-nav__item">
+          <a class='main-nav__link' href='#'>Chokers</a>
+        </li>
+        <li class="main-nav__item">
+          <a class='main-nav__link' href='#'>Necklaces</a>
+        </li>
+        <li class="main-nav__item">
+          <a class='main-nav__link' href='#'>Rings</a>
+        </li>
+        <li class="main-nav__item">
+          <a class='main-nav__link' href='#'>Earrings</a>
+        </li>
       </ul>
       <ul class='page-header__hidden-nav hidden-nav'>
-        <li class='hidden-nav__item'>About CH</li>
-        <li class='hidden-nav__item'>Stores & Hours</li>
-        <li class='hidden-nav__item'>AContact Us</li>
+        <li class='hidden-nav__item'>
+          <a class='hidden-nav__link' href='#'>About CH</a>
+        </li>
+        <li class='hidden-nav__item'>
+          <a class='hidden-nav__link' href='#'>Stores & Hours</a>
+        </li>
+        <li class='hidden-nav__item'>
+          <a class='hidden-nav__link' href='#'>AContact Us</a>
+        </li>
       </ul>
     </div>
   </header>
@@ -216,7 +241,8 @@
         <p>News and updates from CH. No spam, we promise.</p>
         <div class='subscribe__input-wrapper'>
           <input type='email' placeholder='Your E-mail' name='subscribe-email' id='subscribe-email'>
-          <label for='subscribe-email'></label>
+          <label class='visually-hidden' for='subscribe-email'>Email</label>
+          <button class='subscribe__button button button--subscribe'>Sign Up</button>
         </div>
       </div>
       <div class='page-footer__footer-nav footer-nav'>

@@ -52,4 +52,8 @@
     background-position: center;
     background-size: 15px 10px;
   }
+
+  &:last-child {
+    border-bottom: none;
+  }
 }

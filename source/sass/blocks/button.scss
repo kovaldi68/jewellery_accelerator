@@ -3,16 +3,23 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  padding: 30px 40px;
-  background-color: $black-basic;
+  padding: 28px;
+  background-color: $brown-decor;
   border-style: none;
   border-radius: 0;
   cursor: pointer;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
-  text-transform: uppercase;
   color: $white-basic;
+
+  &--subscribe {
+    padding: 15px 41px 15px 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    background-color: transparent;
+  }
 }
 
 @media (max-width: $tablet-width-max) {

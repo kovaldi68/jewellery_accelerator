@@ -12,6 +12,7 @@ $cormorant: 'Cormorant Garamond','Arial', sans-serif;
 // black&white
 
 $white-basic: #ffffff;
+$white-basic-opacity-75: rgba($white-basic, 0.75);
 $white-basic-opacity-15: rgba($white-basic, 0.15);
 
 $black-basic: #000000;

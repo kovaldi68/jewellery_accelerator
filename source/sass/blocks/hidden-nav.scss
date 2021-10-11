@@ -1,3 +1,20 @@
 .hidden-nav {
   @include list-reset;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.hidden-nav__item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.hidden-nav__link {
+  color: $white-basic-opacity-75;
 }
