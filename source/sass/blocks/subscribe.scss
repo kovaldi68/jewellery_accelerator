@@ -10,6 +10,7 @@
 
   p {
     margin: 0;
+    margin-bottom: 27px;
     font-weight: 400;
     line-height: 21px;
     color: $grey-main;
@@ -17,8 +18,12 @@
 }
 
 .subscribe__input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $white-basic;
+
   input {
-    padding: 12px;
+    padding: 15px;
     padding-left: 0;
     font-weight: 500;
     background-color: transparent;
@@ -28,6 +33,19 @@
       font-size: 14px;
       line-height: 21px;
       color: $grey-main;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .subscribe {
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 23px;
+      line-height: 22px;
     }
   }
 }

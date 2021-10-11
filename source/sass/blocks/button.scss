@@ -14,11 +14,32 @@
   color: $white-basic;
 
   &--subscribe {
+    position: relative;
     padding: 15px 41px 15px 15px;
+    min-width: 118px;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
     background-color: transparent;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 29px;
+      height: 9px;
+      background-image: url('../img/arrow-icon-white.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 29px 9px;
+      transform: translateY(-50%);
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 }
 
