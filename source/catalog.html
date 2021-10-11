@@ -75,164 +75,190 @@
     </div>
   </header>
   <main class='page-main'>
-    <section class='page-main__promo promo'>
+    <section class='page-main__promo promo promo--catalog'>
       <div class='promo__container container'>
-        <h1>Perfection</h1>
-        <p>made to be yours</p>
+        <h1>All jewellery</h1>
+        <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
       </div>
     </section>
-    <section class='page-main__new-in new-in'>
-      <div class='new-in__container container'>
-        <h2>New In</h2>
-        <a class='new-in__link' href='#'>Shop Now</a>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide good-slide">
-              <picture>
-                <img src='img/new-in-1-desktop-main@1x.jpg' alt='Ожерелье с кристаллом фиолетового аметиста'>
-              </picture>
-              <h3>Necklace with amethyst</h3>
-              <span>$ 145</span>
+    <div class='page-main__catalog catalog'>
+      <button class='catalog__button button button--open-filter'>Filter</button>
+      <div class='catalog__catalog-filter catalog-filter'>
+        <form class="catalog-filter__form" method="get" action="https://echo.htmlacademy.ru">
+          <div class="catalog-filter__wrapper">
+            <div class="catalog-filter__item">
+              <h3 class="catalog-filter__heading">Product</h3>
+              <ul class="catalog-filter__list filter-checkbox">
+                <li class="filter-checkbox__item">
+                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Necklaces" value="Necklaces" id="Necklaces">
+                    <label class="filter-checkbox__label" for="Necklaces">Necklaces</label>
+                </li>
+                <li class="filter-checkbox__item">
+                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Chokers" value="Chokers" id="Chokers">
+                    <label class="filter-checkbox__label" for="Chokers">Chokers</label>
+                </li>
+                <li class="filter-checkbox__item">
+                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Rings" value="Rings" id="Rings">
+                    <label class="filter-checkbox__label" for="Rings">Rings</label>
+                </li>
+                <li class="filter-checkbox__item">
+                  <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Earrings" value="Earrings" id="Earrings">
+                  <label class="filter-checkbox__label" for="Earrings">Earrings</label>
+              </li>
+              </ul>
             </div>
-            <div class="swiper-slide good-slide">
-              <picture>
-                <img src='img/new-in-2-desktop-main@1x.jpg' alt='Черный чокер с серебрянным треугольником'>
-              </picture>
-              <h3>Layered сhoker</h3>
-              <span>$ 115</span>
+            <div class="catalog-filter__item">
+              <h3 class="catalog-filter__heading">Material</h3>
+              <ul class="catalog-filter__list filter-checkbox">
+                <li class="filter-checkbox__item">
+                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="gold-material" value="gold-material" id="gold-material">
+                    <label class="filter-checkbox__label" for="gold-material">Gold</label>
+                </li>
+                <li class="filter-checkbox__item">
+                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="silver-material" value="silver-material" id="silver-material">
+                    <label class="filter-checkbox__label" for="silver-material">Silver</label>
+                </li>
+              </ul>
             </div>
-            <div class="swiper-slide good-slide">
-              <picture>
-                <img src='img/new-in-3-desktop-main@1x.jpg' alt='Золотая подвеска с декоративными элементами'>
-              </picture>
-              <h3>Gold chain</h3>
-              <span>$ 215</span>
+            <div class="catalog-filter__item">
+              <h3 class="catalog-filter__heading">Collection</h3>
+              <ul class="catalog-filter__list filter-checkbox">
+                <li class="filter-checkbox__item">
+                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="pink-flamingo-collection" value="pink-flamingo-collection" id="pink-flamingo-collection">
+                    <label class="filter-checkbox__label" for="pink-flamingo-collection">Pink flamingo</label>
+                </li>
+                <li class="filter-checkbox__item">
+                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="dreams-collection" value="dreams-collection" id="dreams-collection">
+                    <label class="filter-checkbox__label" for="dreams-collection">Dreams</label>
+                </li>
+              </ul>
             </div>
-            <div class="swiper-slide good-slide">
-              <picture>
-                <img src='img/new-in-4-desktop-main@1x.jpg' alt='Серебрянные серьги с камнями в стиле космоса'>
-              </picture>
-              <h3>Galaxy earrings</h3>
-              <span>$ 95</span>
+            <div class="catalog-filter__item">
+              <h3 class="catalog-filter__heading">Price</h3>
+              <div class="catalog-filter__price-range price-range">
+                <div class="price-range__scale">
+                  <div class="price-range__bar"></div>
+                </div>
+                <div id="element-toggle-min" class="price-range__toggle toggle price-range__toggle--min" tabindex="0" aria-label="Ползунок минимального левела"></div>
+                <div id="element-toggle-max" class="price-range__toggle toggle price-range__toggle--max" tabindex="0" aria-label="Ползунок максимального левела"></div>
+              </div>
             </div>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
-          <div class="swiper-pagination"></div>
-        </div>
+          <button class="catalog-filter__button button button--apply" type="submit" formaction="https://echo.htmlacademy.ru">Apply</button>
+          <button class="catalog-filter__button button button--reset" type="reset" formaction="https://echo.htmlacademy.ru">Clear All</button>
+        </form>
+        <button class='catalog-filter__button button button--close-filter'></button>
       </div>
-    </section>
-    <section class='page-main__blog blog'>
-      <div class='blog__container container'>
-        <h2>Blog</h2>
-        <a class='blog__link' href='#'>Read All</a>
-        <ul class='blog__list'>
-          <li class='blog__item blog__item--left-top'>
-            <div class='blog__image'>
-              <picture>
-                <img src='img/how-to-care-image-desktop@1x.jpg' alt='Украшения из золота на столе' width='285' height='300'>
-              </picture>
-            </div>
-            <div class='blog__art-info'>
-              <p>September 30, 2019</p>
-              <h3>How to care for your jewellery</h3>
-              <a class='blog__article-link' href='#'>Read Article</a>
-            </div>
+      <div class='catalog__goods goods'>
+        <ul class='goods__list'>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-1-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Double pearl earrings</p>
+            <span>$ 115</span>
           </li>
-          <li class='blog__item blog__item--left-bot'>
-            <div class='blog__image'>
-              <picture>
-                <img src='img/power-of-crystals-image-desktop@1x.jpg' alt='Брошь из золота и кристаллов на столе' width='285' height='300'>
-              </picture>
-            </div>
-            <div class='blog__art-info'>
-              <p>September 23, 2019</p>
-              <h3>Power of crystals</h3>
-              <a class='blog__article-link' href='#'>Read Article</a>
-            </div>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-2-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Choker with gold bead</p>
+            <span>$ 55</span>
           </li>
-          <li class='blog__item blog__item--right'>
-            <div class='blog__image'>
-              <picture>
-                <img src='img/aw-trends-image-desktop@1x.jpg' alt='Девушка с двумя кольцами и браслетами на руках' width='570' height='630'>
-              </picture>
-            </div>
-            <div class='blog__art-info'>
-              <p>September 16, 2019</p>
-              <h3>AW 19 trends</h3>
-              <a class='blog__article-link' href='#'>Read Article</a>
-            </div>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-3-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Gold layered necklace</p>
+            <span>$ 155</span>
+          </li>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-4-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Blue gemstone pendant</p>
+            <span>$ 105</span>
+          </li>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-5-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Boho earrings</p>
+            <span>$ 75</span>
+          </li>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-6-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Gold bird necklace</p>
+            <span>$ 135</span>
+          </li>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-7-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Black leather choker</p>
+            <span>$ 85</span>
+          </li>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-8-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Necklace with amethyst</p>
+            <span>$ 145</span>
+          </li>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-9-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Elephant earrings</p>
+            <span>$ 95</span>
+          </li>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-10-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Threader necklace</p>
+            <span>$ 115</span>
+          </li>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-11-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Origami crane necklace</p>
+            <span>$ 105</span>
+          </li>
+          <li class='goods__item'>
+            <picture>
+              <img src='img/catalog-12-desktop@1x.jpg' alt=''>
+            </picture>
+            <p>Marble earrings</p>
+            <span>$ 95</span>
           </li>
         </ul>
       </div>
-    </section>
-    <section class='page-main__faq faq'>
-      <div class='faq__container container'>
-        <h2>Frequently asked questions</h2>
-        <div class='faq__questions'>
-          <div class='faq__tab'>
-            <h3>What materials are the jewellery made of?</h3>
-            <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-          </div>
-          <div class='faq__tab'>
-            <h3>Which countries do you deliver to?</h3>
-            <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-          </div>
-          <div class='faq__tab'>
-            <h3>What are the payment methods?</h3>
-            <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-          </div>
-          <div class='faq__tab'>
-            <h3>Can I return the jewellery if it didn’t fit me?</h3>
-            <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-          </div>
-        </div>
+      <div class='catalog__pagination pagination'>
+        <ul class='pagination__pages-list'>
+          <li class='pagination__pages-item pagination__pages-item--active'>
+            <a href='#'>1</a>
+          </li>
+          <li class='pagination__pages-item'>
+            <a href='#'>2</a>
+          </li>
+          <li class='pagination__pages-item'>
+            <a href='#'>3</a>
+          </li>
+          <li class='pagination__pages-item'>
+            <a href='#'>4</a>
+          </li>
+          <li class='pagination__pages-item'>
+            <a href='#'>5</a>
+          </li>
+        </ul>
+        <a href='pagination__flip-control pagination__flip-control--prev'>Previous</a>
+        <a href='pagination__flip-control pagination__flip-control--next'>Next</a>
       </div>
-    </section>
-    <section class='page-main__insta insta'>
-      <div class='insta__container container'>
-        <h2>@Chjewellery</h2>
-        <a href='#'>Follow Us</a>
-        <ul class='insta__photo-block'>
-          <li class='insta__photo'>
-            <picture>
-              <img src='img/inst-gallery-image-1-desktop@1x.jpg' alt='Две золотых серьги с камнем лежат на углу лэптопа'>
-            </picture>
-          </li>
-          <li class='insta__photo'>
-            <picture>
-              <img src='img/inst-gallery-image-2-desktop@1x.jpg' alt='Висячие серьги с камнями лежат на спец подставке из ткани'>
-            </picture>
-          </li>
-          <li class='insta__photo'>
-            <picture>
-              <img src='img/inst-gallery-image-3-desktop@1x.jpg' alt='Девушка в сером платье подняв волосы показывает большие серьги из камня'>
-            </picture>
-          </li>
-          <li class='insta__photo'>
-            <picture>
-              <img src='img/inst-gallery-image-4-desktop@1x.jpg' alt='2 заолотых браслета с большими камнями и золотое кольцо на фоне шерстяного серого свитера'>
-            </picture>
-          </li>
-          <li class='insta__photo'>
-            <picture>
-              <img src='img/inst-gallery-image-5-desktop@1x.jpg' alt='Золотые 2 серьги, подвеска и браслет на белом, освещённом солнце, листе бумаги'>
-            </picture>
-          </li>
-          <li class='insta__photo'>
-            <picture>
-              <img src='img/inst-gallery-image-6-desktop@1x.jpg' alt='2 золотые плетеные круглые серьги на бело-бежевом фоне'>
-            </picture>
-          </li>
-          <li class='insta__photo'>
-            <picture>
-              <img src='img/inst-gallery-image-7-desktop@1x.jpg' alt='Девушка сидит в платье рядом с деревом и каменной стеной, на пальцах рук 7 разных колец с камнями'>
-            </picture>
-          </li>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
   <footer class='page-footer'>
     <div class='page-footer__container container'>
