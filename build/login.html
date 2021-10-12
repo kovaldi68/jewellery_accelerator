@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Accelerator project: Jewellery">
+  <meta http-equiv="Cache-Control" content="max-age=31536000">
+  <title>Web-site Jewellery</title>
+  <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/CormorantGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/CormorantGaramond-MediumItalic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header>
+    <div class="page-header__container container">
+      <a class="page-header__logo" href="">
+        <img src="img/logo.svg" alt="Логотип магазина" width="66" height="66">
+      </a>
+      <a class="page-header__index-link" href="index.html">На главную</a>
+    </div>
+  </header>
+  <main>
+    <section class="login">
+      <div class="login__content">
+        <div class="login__img">
+          <picture>
+            <img src="img/intro-logIn-desktop@1x.jpg" width="430" height="138" alt="Изображение золотых украшений">
+          </picture>
+        </div>
+        <h1>Log In</h1>
+        <div class="login__form">
+          <form action="https://echo.htmlacademy.ru" method="GET">
+            <div class="login__form-fields">
+              <label class="visually-hidden" for="mail-input">Введие почту</label>
+              <input type="email" name="mail" id="mail-input" placeholder="Your E-mail" required="">
+            </div>
+            <div class="login__form-fields">
+              <label class="visually-hidden" for="pass-input">Введите пароль</label>
+              <input type="password" name="password" id="pass-input" placeholder="Password" required="">
+              <a href="#">Forgot your password?</a>
+            </div>
+            <button type="button">Log In</button>
+          </form>
+        </div>
+        <div class="login__signup">
+          <p>Don’t have an account?<a class="login-signup-link" href="#">Sign up</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

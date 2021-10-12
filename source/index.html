@@ -88,30 +88,38 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide good-slide">
-              <picture>
-                <img src='img/new-in-1-desktop-main@1x.jpg' alt='Ожерелье с кристаллом фиолетового аметиста'>
-              </picture>
+              <div class='good-slide__image'>
+                <picture>
+                  <img src='img/new-in-1-desktop-main@1x.jpg' alt='Ожерелье с кристаллом фиолетового аметиста'>
+                </picture>
+              </div>
               <h3>Necklace with amethyst</h3>
               <span>$ 145</span>
             </div>
             <div class="swiper-slide good-slide">
-              <picture>
-                <img src='img/new-in-2-desktop-main@1x.jpg' alt='Черный чокер с серебрянным треугольником'>
-              </picture>
+              <div class='good-slide__image'>
+                <picture>
+                  <img src='img/new-in-2-desktop-main@1x.jpg' alt='Черный чокер с серебрянным треугольником'>
+                </picture>
+              </div>
               <h3>Layered сhoker</h3>
               <span>$ 115</span>
             </div>
             <div class="swiper-slide good-slide">
-              <picture>
-                <img src='img/new-in-3-desktop-main@1x.jpg' alt='Золотая подвеска с декоративными элементами'>
-              </picture>
+              <div class='good-slide__image'>
+                <picture>
+                  <img src='img/new-in-3-desktop-main@1x.jpg' alt='Золотая подвеска с декоративными элементами'>
+                </picture>
+              </div>
               <h3>Gold chain</h3>
               <span>$ 215</span>
             </div>
             <div class="swiper-slide good-slide">
-              <picture>
-                <img src='img/new-in-4-desktop-main@1x.jpg' alt='Серебрянные серьги с камнями в стиле космоса'>
-              </picture>
+              <div class='good-slide__image'>
+                <picture>
+                  <img src='img/new-in-4-desktop-main@1x.jpg' alt='Серебрянные серьги с камнями в стиле космоса'>
+                </picture>
+              </div>
               <h3>Galaxy earrings</h3>
               <span>$ 95</span>
             </div>
@@ -322,25 +330,6 @@
     </div>
   </footer>
   <script src='js/main.js'></script>
-  <script type="module">
-    import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
-
-    const swiper = new Swiper('.swiper', {
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        // renderBullet: function(index, className) {
-        //   return '<span class="' + className + '">' + (index + 1) + '</span>';
-        // }
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }
-    });
   </script>
 </body>
 </html>

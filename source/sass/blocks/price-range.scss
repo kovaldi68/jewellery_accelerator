@@ -1,0 +1,53 @@
+.price-range {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.price-range__scale {
+  height: 2px;
+  background-color: $grey-blog;
+}
+
+.price-range__bar {
+  height: 2px;
+  width: 43%;
+  margin-left: 19%;
+  background-color: $brown-decor;
+}
+
+.price-range__toggle {
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: $brown-decor;
+  border-radius: 50%;
+  transform: translateY(-50%);
+
+  &::after {
+    content: attr(aria-price);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: min-content;
+    font-size: 14px;
+    line-height: 18px;
+    transform: translateX(-50%);
+  }
+
+  &--min {
+    left: 16%;
+  }
+
+  &--max {
+    left: 59%;
+  }
+}
+
+.price-range__toggle--min {
+
+}
+
+.price-range__toggle--max {
+
+}

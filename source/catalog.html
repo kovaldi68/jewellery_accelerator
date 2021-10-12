@@ -82,181 +82,209 @@
       </div>
     </section>
     <div class='page-main__catalog catalog'>
-      <button class='catalog__button button button--open-filter'>Filter</button>
-      <div class='catalog__catalog-filter catalog-filter'>
-        <form class="catalog-filter__form" method="get" action="https://echo.htmlacademy.ru">
-          <div class="catalog-filter__wrapper">
-            <div class="catalog-filter__item">
-              <h3 class="catalog-filter__heading">Product</h3>
-              <ul class="catalog-filter__list filter-checkbox">
-                <li class="filter-checkbox__item">
-                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Necklaces" value="Necklaces" id="Necklaces">
-                    <label class="filter-checkbox__label" for="Necklaces">Necklaces</label>
+      <div class='catalog__container container'>
+        <button class='catalog__button button button--open-filter'>Filter</button>
+        <div class='catalog__catalog-filter catalog-filter catalog-filter--opened'>
+          <form class="catalog-filter__form" method="get" action="https://echo.htmlacademy.ru">
+            <div class="catalog-filter__wrapper">
+              <div class="catalog-filter__item catalog-filter__item--active">
+                <h3 class="catalog-filter__heading">Product</h3>
+                <ul class="catalog-filter__checkbox filter-checkbox">
+                  <li class="filter-checkbox__item">
+                      <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Necklaces" value="Necklaces" id="Necklaces" checked>
+                      <label class="filter-checkbox__label" for="Necklaces">Necklaces</label>
+                  </li>
+                  <li class="filter-checkbox__item">
+                      <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Chokers" value="Chokers" id="Chokers" checked>
+                      <label class="filter-checkbox__label" for="Chokers">Chokers</label>
+                  </li>
+                  <li class="filter-checkbox__item">
+                      <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Rings" value="Rings" id="Rings">
+                      <label class="filter-checkbox__label" for="Rings">Rings</label>
+                  </li>
+                  <li class="filter-checkbox__item">
+                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Earrings" value="Earrings" id="Earrings" checked>
+                    <label class="filter-checkbox__label" for="Earrings">Earrings</label>
                 </li>
-                <li class="filter-checkbox__item">
-                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Chokers" value="Chokers" id="Chokers">
-                    <label class="filter-checkbox__label" for="Chokers">Chokers</label>
-                </li>
-                <li class="filter-checkbox__item">
-                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Rings" value="Rings" id="Rings">
-                    <label class="filter-checkbox__label" for="Rings">Rings</label>
-                </li>
-                <li class="filter-checkbox__item">
-                  <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="Earrings" value="Earrings" id="Earrings">
-                  <label class="filter-checkbox__label" for="Earrings">Earrings</label>
-              </li>
-              </ul>
-            </div>
-            <div class="catalog-filter__item">
-              <h3 class="catalog-filter__heading">Material</h3>
-              <ul class="catalog-filter__list filter-checkbox">
-                <li class="filter-checkbox__item">
-                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="gold-material" value="gold-material" id="gold-material">
-                    <label class="filter-checkbox__label" for="gold-material">Gold</label>
-                </li>
-                <li class="filter-checkbox__item">
-                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="silver-material" value="silver-material" id="silver-material">
-                    <label class="filter-checkbox__label" for="silver-material">Silver</label>
-                </li>
-              </ul>
-            </div>
-            <div class="catalog-filter__item">
-              <h3 class="catalog-filter__heading">Collection</h3>
-              <ul class="catalog-filter__list filter-checkbox">
-                <li class="filter-checkbox__item">
-                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="pink-flamingo-collection" value="pink-flamingo-collection" id="pink-flamingo-collection">
-                    <label class="filter-checkbox__label" for="pink-flamingo-collection">Pink flamingo</label>
-                </li>
-                <li class="filter-checkbox__item">
-                    <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="dreams-collection" value="dreams-collection" id="dreams-collection">
-                    <label class="filter-checkbox__label" for="dreams-collection">Dreams</label>
-                </li>
-              </ul>
-            </div>
-            <div class="catalog-filter__item">
-              <h3 class="catalog-filter__heading">Price</h3>
-              <div class="catalog-filter__price-range price-range">
-                <div class="price-range__scale">
-                  <div class="price-range__bar"></div>
+                </ul>
+              </div>
+              <div class="catalog-filter__item">
+                <h3 class="catalog-filter__heading">Material</h3>
+                <ul class="catalog-filter__checkbox filter-checkbox">
+                  <li class="filter-checkbox__item">
+                      <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="gold-material" value="gold-material" id="gold-material">
+                      <label class="filter-checkbox__label" for="gold-material">Gold</label>
+                  </li>
+                  <li class="filter-checkbox__item">
+                      <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="silver-material" value="silver-material" id="silver-material">
+                      <label class="filter-checkbox__label" for="silver-material">Silver</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="catalog-filter__item">
+                <h3 class="catalog-filter__heading">Collection</h3>
+                <ul class="catalog-filter__checkbox filter-checkbox">
+                  <li class="filter-checkbox__item">
+                      <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="pink-flamingo-collection" value="pink-flamingo-collection" id="pink-flamingo-collection">
+                      <label class="filter-checkbox__label" for="pink-flamingo-collection">Pink flamingo</label>
+                  </li>
+                  <li class="filter-checkbox__item">
+                      <input class="visually-hidden filter-checkbox__tag" type="checkbox" name="dreams-collection" value="dreams-collection" id="dreams-collection">
+                      <label class="filter-checkbox__label" for="dreams-collection">Dreams</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="catalog-filter__item catalog-filter__item--active">
+                <h3 class="catalog-filter__heading">Price</h3>
+                <div class="catalog-filter__price-range price-range">
+                  <div class="price-range__scale">
+                    <div class="price-range__bar"></div>
+                  </div>
+                  <div id="element-toggle-min" class="price-range__toggle toggle price-range__toggle--min" tabindex="0" aria-price='$&nbsp;55' aria-label="Ползунок минимального левела"></div>
+                  <div id="element-toggle-max" class="price-range__toggle toggle price-range__toggle--max" tabindex="0" aria-price='$&nbsp;155' aria-label="Ползунок максимального левела"></div>
                 </div>
-                <div id="element-toggle-min" class="price-range__toggle toggle price-range__toggle--min" tabindex="0" aria-label="Ползунок минимального левела"></div>
-                <div id="element-toggle-max" class="price-range__toggle toggle price-range__toggle--max" tabindex="0" aria-label="Ползунок максимального левела"></div>
               </div>
             </div>
-          </div>
-          <button class="catalog-filter__button button button--apply" type="submit" formaction="https://echo.htmlacademy.ru">Apply</button>
-          <button class="catalog-filter__button button button--reset" type="reset" formaction="https://echo.htmlacademy.ru">Clear All</button>
-        </form>
-        <button class='catalog-filter__button button button--close-filter'></button>
-      </div>
-      <div class='catalog__goods goods'>
-        <ul class='goods__list'>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-1-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Double pearl earrings</p>
-            <span>$ 115</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-2-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Choker with gold bead</p>
-            <span>$ 55</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-3-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Gold layered necklace</p>
-            <span>$ 155</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-4-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Blue gemstone pendant</p>
-            <span>$ 105</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-5-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Boho earrings</p>
-            <span>$ 75</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-6-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Gold bird necklace</p>
-            <span>$ 135</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-7-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Black leather choker</p>
-            <span>$ 85</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-8-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Necklace with amethyst</p>
-            <span>$ 145</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-9-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Elephant earrings</p>
-            <span>$ 95</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-10-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Threader necklace</p>
-            <span>$ 115</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-11-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Origami crane necklace</p>
-            <span>$ 105</span>
-          </li>
-          <li class='goods__item'>
-            <picture>
-              <img src='img/catalog-12-desktop@1x.jpg' alt=''>
-            </picture>
-            <p>Marble earrings</p>
-            <span>$ 95</span>
-          </li>
-        </ul>
-      </div>
-      <div class='catalog__pagination pagination'>
-        <ul class='pagination__pages-list'>
-          <li class='pagination__pages-item pagination__pages-item--active'>
-            <a href='#'>1</a>
-          </li>
-          <li class='pagination__pages-item'>
-            <a href='#'>2</a>
-          </li>
-          <li class='pagination__pages-item'>
-            <a href='#'>3</a>
-          </li>
-          <li class='pagination__pages-item'>
-            <a href='#'>4</a>
-          </li>
-          <li class='pagination__pages-item'>
-            <a href='#'>5</a>
-          </li>
-        </ul>
-        <a href='pagination__flip-control pagination__flip-control--prev'>Previous</a>
-        <a href='pagination__flip-control pagination__flip-control--next'>Next</a>
+            <div class='catalog-filter__buttons'>
+              <button class="catalog-filter__button button button--apply" type="submit" formaction="https://echo.htmlacademy.ru">Apply</button>
+              <button class="catalog-filter__button button button--reset" type="reset" formaction="https://echo.htmlacademy.ru">Clear All</button>
+            </div>
+          </form>
+          <button class='catalog-filter__button button button--close-filter'></button>
+        </div>
+        <div class='catalog__goods goods'>
+          <ul class='goods__list'>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-1-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Double pearl earrings</p>
+              <span>$ 115</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-2-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Choker with gold bead</p>
+              <span>$ 55</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-3-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Gold layered necklace</p>
+              <span>$ 155</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-4-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Blue gemstone pendant</p>
+              <span>$ 105</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-5-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Boho earrings</p>
+              <span>$ 75</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-6-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Gold bird necklace</p>
+              <span>$ 135</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-7-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Black leather choker</p>
+              <span>$ 85</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-8-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Necklace with amethyst</p>
+              <span>$ 145</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-9-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Elephant earrings</p>
+              <span>$ 95</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-10-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Threader necklace</p>
+              <span>$ 115</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-11-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Origami crane necklace</p>
+              <span>$ 105</span>
+            </li>
+            <li class='goods__item'>
+              <div class='goods__image'>
+                <picture>
+                  <img src='img/catalog-12-desktop@1x.jpg' alt=''>
+                </picture>
+              </div>
+              <p>Marble earrings</p>
+              <span>$ 95</span>
+            </li>
+          </ul>
+        </div>
+        <div class='catalog__pagination pagination'>
+          <a class='pagination__flip-control pagination__flip-control--prev' href='#'>Previous</a>
+          <ul class='pagination__pages-list'>
+            <li class='pagination__pages-item pagination__pages-item--active'>
+              <a class='pagination__pages-link' href='#'>1</a>
+            </li>
+            <li class='pagination__pages-item'>
+              <a class='pagination__pages-link' href='#'>2</a>
+            </li>
+            <li class='pagination__pages-item'>
+              <a class='pagination__pages-link' href='#'>3</a>
+            </li>
+            <li class='pagination__pages-item'>
+              <a class='pagination__pages-link' href='#'>4</a>
+            </li>
+            <li class='pagination__pages-item'>
+              <a class='pagination__pages-link' href='#'>5</a>
+            </li>
+          </ul>
+          <a class='pagination__flip-control pagination__flip-control--next' href='#'>Next</a>
+        </div>
       </div>
     </div>
   </main>
