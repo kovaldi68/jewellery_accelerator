@@ -1,0 +1,144 @@
+.insta {
+  padding-top: 54px;
+  padding-bottom: 132px;
+}
+
+.insta__container {
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+  }
+
+  .insta__link {
+    display: inline-block;
+    margin-bottom: 60px;
+    line-height: 19px;
+    border-bottom: .5px solid $brown-decor;
+  }
+}
+
+.insta__photo-block {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 19% 32% 19% 19%;
+  grid-template-rows: 54% 34%;
+  grid-template-areas: 'topleft middleleft middletopright topright'
+  'bottomleft middleleft middlebotright bottomright';
+  column-gap: 27px;
+  row-gap: 34px;
+}
+
+.insta__photo {
+  &--1 {
+    grid-area: topleft;
+  }
+
+  &--2 {
+    grid-area: bottomleft;
+  }
+
+  &--3 {
+    grid-area: middleleft;
+  }
+
+  &--4 {
+    grid-area: middletopright;
+  }
+
+  &--5 {
+    grid-area: middlebotright;
+  }
+
+  &--6 {
+    grid-area: topright;
+  }
+
+  &--7 {
+    grid-area: bottomright;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .insta {
+    padding-top: 42px;
+    padding-bottom: 80px;
+  }
+
+  .insta__photo-block {
+    grid-template-rows: 56% 36%;
+    column-gap: 16px;
+    row-gap: 21px;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .insta {
+    padding-top: 35px;
+    padding-bottom: 71px;
+  }
+
+  .insta__container {
+    .insta__link {
+      margin-bottom: 56px;
+    }
+  }
+
+  .insta__photo-block {
+    grid-template-columns: 46% 46%;
+    grid-template-rows: 37% 24% 24%;
+    grid-template-areas: 'topleft topright'
+    'middleleft topright'
+    'bottomleft bottomright';
+    column-gap: 27px;
+    row-gap: 34px;
+  }
+
+  .insta__photo {
+    &--1 {
+      grid-area: topleft;
+    }
+
+    &--2 {
+      grid-area: middleleft;
+    }
+
+    &--3 {
+      grid-area: topright;
+    }
+
+    &--4 {
+      display: none;
+      grid-area: unset;
+    }
+
+    &--5 {
+      grid-area: bottomleft;
+    }
+
+    &--6 {
+      display: none;
+      grid-area: unset;
+    }
+
+    &--7 {
+      grid-area: bottomright;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
