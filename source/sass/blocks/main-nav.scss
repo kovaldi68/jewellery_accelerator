@@ -19,6 +19,12 @@
 
 .main-nav__link {
   color: $black-main;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
 }
 
 @media (max-width: $tablet-width-max) {
@@ -42,5 +48,11 @@
 
   .main-nav__link {
     color: $white-basic;
+
+    &:hover,
+    &:focus {
+      color: $black-main;
+      opacity: 1;
+    }
   }
 }

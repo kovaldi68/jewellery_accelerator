@@ -1,21 +1,55 @@
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
+(() => {
+  const swiper = new Swiper('.swiper', {
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+    navigation: {
+      nextEl: '.swiper-arrow--next',
+      prevEl: '.swiper-arrow--prev',
+    },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+    simulateTouch: false,
+    spaceBetween: 30,
+    loop: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        pagination: {
+          type: 'fraction',
+          renderFraction: function(currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+          }
+        },
+        grabCursor: true,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        pagination: {
+          type: 'bullets',
+          clickable: true,
+          renderBullet: function(index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          }
+        },
+        grabCursor: true,
+      },
+      1023: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        pagination: {
+          type: 'bullets',
+          clickable: true,
+          renderBullet: function(index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          }
+        },
+      },
+    }
+  });
+})();

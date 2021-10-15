@@ -18,6 +18,7 @@
 }
 
 .subscribe__input-wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid $white-basic;
@@ -28,6 +29,9 @@
     font-weight: 500;
     background-color: transparent;
     border: none;
+    outline: 0;
+    caret-color: $white-basic;
+    color: $white-basic;
 
     &::placeholder {
       font-size: 14px;
@@ -35,6 +39,11 @@
       color: $grey-main;
     }
   }
+}
+
+.subscribe__button {
+  bottom: 0;
+  right: 0;
 }
 
 @media (max-width: $mobile-width-max) {

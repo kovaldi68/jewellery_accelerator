@@ -44,7 +44,7 @@
 
 .page-header__logo {
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 306px;
   width: 66px;
   height: 66px;
 
@@ -66,6 +66,12 @@
     svg {
       display: none;
     }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
   }
 }
 
@@ -246,6 +252,12 @@
         stroke: currentColor;
       }
     }
+
+    &:hover,
+    &:focus {
+      color: $black-main;
+      opacity: 1;
+    }
   }
 
   .page-header__container {
@@ -264,6 +276,10 @@
         color: transparent;
       }
     }
+  }
+
+  .page-header__logo {
+    margin-left: auto;
   }
 
   .page-header__toggle {

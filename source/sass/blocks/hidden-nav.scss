@@ -17,4 +17,10 @@
 
 .hidden-nav__link {
   color: $white-basic-opacity-75;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $black-main;
+  }
 }
