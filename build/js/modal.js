@@ -11,9 +11,9 @@
   let isStorageSupport = true;
   let storageEmail= '';
 
-  const modalHandler = function(evt) {
+  const modalHandler = function() {
     body.classList.add('page-body--modal-opened');
-    showUpSignInModal(evt);
+    showUpSignInModal();
   }
 
   const signInModalHandler = () => {

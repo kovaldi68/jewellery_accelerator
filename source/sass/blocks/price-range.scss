@@ -10,8 +10,8 @@
 
 .price-range__bar {
   height: 2px;
-  width: 43%;
-  margin-left: 19%;
+  width: 55%;
+  margin-left: 22%;
   background-color: $brown-decor;
 }
 
@@ -36,10 +36,10 @@
   }
 
   &--min {
-    left: 16%;
+    left: 22%;
   }
 
   &--max {
-    left: 59%;
+    left: 75%;
   }
 }

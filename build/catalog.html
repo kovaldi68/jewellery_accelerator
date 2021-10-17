@@ -20,13 +20,16 @@
   <header class="page-header page-header--nojs">
     <div class="page-header__container container">
       <button class="page-header__toggle" type="button" aria-label="Открыть или закрыть меню"></button>
-      <div class="page-header__search-wrapper">
-        <form class="page-header__search-form">
-          <button class="page-header__search-button" type="submit"></button>
-          <input type="text" name="search-input" id="search-input" placeholder="Type here to search">
-          <label class="visually-hidden" for="search-input">Поиск</label>
-        </form>
-      </div>
+      <form class="page-header__search-wrapper">
+        <button class="page-header__search-button button button--search" type="submit">
+          <svg class="page-header__search-icon" width="14" height="14" aria-label="Иконка поиска">
+            <use xlink:href="img/sprite.svg#search-icon">
+            </use>
+          </svg>
+        </button>
+        <input type="text" name="search-input" id="search-input" placeholder="Type here to search">
+        <label class="visually-hidden" for="search-input">Поиск</label>
+      </form>
       <a class="page-header__logo" href="index.html">
         <img src="img/logo.svg" alt="Логотип магазина" width="66" height="66">
       </a>
@@ -73,18 +76,18 @@
   </header>
   <main class="page-main">
     <section class="page-main__promo promo promo--catalog">
-      <div class="promo__container container">
+      <div class="promo__container container promo__container--catalog">
         <h1>All jewellery</h1>
         <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
       </div>
     </section>
     <div class="page-main__catalog catalog">
       <div class="catalog__container container">
-        <button class="catalog__button button button--main button--open-filter">Filter</button>
+        <button class="catalog__button button button--main button--open-filter" method="get" action="https://echo.htmlacademy.ru">Filter</button>
         <div class="catalog__catalog-filter catalog-filter">
           <form class="catalog-filter__form" method="get" action="https://echo.htmlacademy.ru">
             <div class="catalog-filter__wrapper catalog-filter__wrapper--accordion">
-              <div class="catalog-filter__item catalog-filter__item--product catalog-filter__item--active">
+              <fieldset class="catalog-filter__item catalog-filter__item--product catalog-filter__item--active">
                 <h3 class="catalog-filter__title catalog-filter__title--accord-select">Product</h3>
                 <div class="catalog-filter__content">
                   <ul class="catalog-filter__checkbox filter-checkbox">
@@ -106,8 +109,8 @@
                   </li>
                   </ul>
                 </div>
-              </div>
-              <div class="catalog-filter__item catalog-filter__item--material catalog-filter__item--active">
+              </fieldset>
+              <fieldset class="catalog-filter__item catalog-filter__item--material catalog-filter__item--active">
                 <h3 class="catalog-filter__title">Material</h3>
                 <div class="catalog-filter__content">
                   <ul class="catalog-filter__checkbox filter-checkbox">
@@ -121,8 +124,8 @@
                     </li>
                   </ul>
                 </div>
-              </div>
-              <div class="catalog-filter__item catalog-filter__item--collection catalog-filter__item--active">
+              </fieldset>
+              <fieldset class="catalog-filter__item catalog-filter__item--collection catalog-filter__item--active">
                 <h3 class="catalog-filter__title">Collection</h3>
                 <div class="catalog-filter__content">
                   <ul class="catalog-filter__checkbox filter-checkbox">
@@ -136,8 +139,8 @@
                     </li>
                   </ul>
                 </div>
-              </div>
-              <div class="catalog-filter__item catalog-filter__item--price catalog-filter__item--active">
+              </fieldset>
+              <fieldset class="catalog-filter__item catalog-filter__item--price catalog-filter__item--active">
                 <h3 class="catalog-filter__title">Price</h3>
                 <div class="catalog-filter__content catalog-filter__content--price">
                   <div class="catalog-filter__price-range price-range">
@@ -148,7 +151,7 @@
                     <div id="element-toggle-max" class="price-range__toggle toggle price-range__toggle--max" tabindex="0" data-toggle="$&nbsp;155" aria-label="Ползунок максимального левела"></div>
                   </div>
                 </div>
-              </div>
+              </fieldset>
             </div>
             <div class="catalog-filter__buttons">
               <button class="catalog-filter__button button button--apply" type="submit" formaction="https://echo.htmlacademy.ru">Apply</button>

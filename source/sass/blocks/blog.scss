@@ -1,5 +1,5 @@
 .blog {
-  padding-top: 65px;
+  padding-top: 47px;
   padding-bottom: 65px;
 }
 
@@ -8,7 +8,7 @@
 
   h2 {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 19px;
     font-family: $cormorant;
     font-size: 34px;
     line-height: 44px;
@@ -19,9 +19,15 @@
 .blog__link {
   display: inline-block;
   margin-bottom: 60px;
-  line-height: 19px;
+  line-height: 25px;
   border-bottom: .5px solid $brown-decor;
   color: $black-main;
+
+  &:hover,
+  &:focus {
+    color: $brown-decor;
+    border-bottom: 1px solid $black-main;
+  }
 }
 
 .blog__list {
@@ -64,6 +70,10 @@
       bottom: 0;
       right: 0;
     }
+
+    .blog__article-link {
+      margin-bottom: 35px;
+    }
   }
 }
 
@@ -90,7 +100,7 @@
 
   p {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
     font-size: 14px;
     line-height: 18px;
     color: $grey-main;
@@ -98,7 +108,7 @@
 
   h3 {
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     max-width: 163px;
     font-family: $cormorant;
     font-weight: 600;
@@ -109,10 +119,16 @@
 
 .blog__article-link {
   display: inline-block;
-  padding-bottom: 10px;
+  padding-bottom: 4px;
   line-height: 21px;
   color: $black-main;
   border-bottom: 1px solid $brown-decor;
+
+  &:hover,
+  &:focus {
+    color: $brown-decor;
+    border-bottom: 1px solid $black-main;
+  }
 }
 
 @media (max-width: $tablet-width-max) {

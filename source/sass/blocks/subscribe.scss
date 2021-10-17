@@ -1,11 +1,12 @@
 .subscribe {
   h2 {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     font-family: $cormorant;
     font-weight: 700;
     font-size: 34px;
     line-height: 44px;
+    letter-spacing: 0.02em;
   }
 
   p {
@@ -25,7 +26,9 @@
 
   input {
     padding: 15px;
+    padding-bottom: 11px;
     padding-left: 0;
+    width: 80%;
     font-weight: 500;
     background-color: transparent;
     border: none;

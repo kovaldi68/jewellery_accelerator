@@ -4,6 +4,12 @@
 }
 
 .filter-checkbox__item {
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   label {
     position: relative;
     padding-left: 25px;

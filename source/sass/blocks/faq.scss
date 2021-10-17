@@ -1,15 +1,17 @@
 .faq {
-  padding-top: 65px;
+  padding-top: 55px;
   padding-bottom: 54px;
 }
 
 .faq__container {
   text-align: center;
-  padding: 0 198px;
+  padding: 0 120px;
 
   h2 {
+    margin: 0;
+    margin-bottom: 48px;
     font-family: $cormorant;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 34px;
     line-height: 44px;
     letter-spacing: 0.03em;
@@ -22,7 +24,7 @@
 }
 
 .faq__tab {
-  padding: 50px 50px 50px 38px;
+  padding: 43px 43px 43px 42px;
   border-bottom: 1px solid $brown-decor;
 
   h3 {
@@ -44,6 +46,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 15px 10px;
+      transform: rotate(180deg);
     }
   }
 
@@ -65,17 +68,17 @@
 
   &--active {
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 8px;
 
       &::before {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
       }
     }
 
     p {
       height: min-content;
-      padding-left: 12px;
-      width: 57%;
+      padding-left: 7px;
+      width: 60%;
       transition: $transition-time-slow;
     }
   }

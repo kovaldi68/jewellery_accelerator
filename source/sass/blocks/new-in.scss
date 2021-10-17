@@ -1,5 +1,5 @@
 .new-in {
-  padding-top: 130px;
+  padding-top: 120px;
   padding-bottom: 65px;
 }
 
@@ -8,7 +8,7 @@
 
   h2 {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 23px;
     font-family: $cormorant;
     font-size: 34px;
     line-height: 44px;
@@ -20,12 +20,10 @@
   line-height: 19px;
   border-bottom: .5px solid $brown-decor;
   color: $black-main;
-}
 
-.new-in__list {
-
-}
-
-.new-in__item {
-
+  &:hover,
+  &:focus {
+    color: $brown-decor;
+    border-bottom: 1px solid $black-main;
+  }
 }

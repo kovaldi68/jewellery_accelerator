@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: auto;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -11,10 +10,12 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
+  margin-left: -30px;
 }
 
 .pagination__pages-item {
-  padding: 7px;
+  padding: 6px;
+  padding-top: 7px;
 
   &--active {
     .pagination__pages-link {
@@ -29,6 +30,11 @@
 
 .pagination__flip-control {
   color: $black-main;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 @media (max-width: $mobile-width-max) {

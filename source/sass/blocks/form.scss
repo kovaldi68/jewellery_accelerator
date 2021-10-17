@@ -74,12 +74,17 @@
       font-size: 12px;
       line-height: 18px;
       color: $grey-main;
+
+      &:hover,
+      &:focus {
+        color: $brown-decor;
+      }
     }
   }
 }
 
 .form__button {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .form__sign-up-text {
@@ -92,6 +97,11 @@
 
   a {
     color: $black-main;
+
+    &:hover,
+    &:focus {
+      color: $brown-decor;
+    }
   }
 }
 

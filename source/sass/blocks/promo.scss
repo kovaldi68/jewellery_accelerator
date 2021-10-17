@@ -1,7 +1,7 @@
 .promo {
   position: relative;
-  padding-top: 195px;
-  padding-bottom: 194px;
+  padding-top: 182px;
+  padding-bottom: 183px;
   background-image: url('../img/intro-main-desktop@1x.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -22,8 +22,8 @@
   }
 
   &--catalog {
-    padding-top: 102px;
-    padding-bottom: 102px;
+    padding-top: 93px;
+    padding-bottom: 95px;
     background-image: url('../img/intro-catalog-desktop@1x.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -43,9 +43,8 @@
 
   h1 {
     margin: 0;
-    margin-bottom: 20px;
     font-size: 45px;
-    line-height: 58px;
+    line-height: 53px;
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -53,9 +52,23 @@
 
   p {
     margin: 0;
-    font-size: 45px;
     font-style: italic;
-    line-height: 58px;
+    font-size: 38px;
+    line-height: 45px;
     font-weight: 400;
+  }
+
+  &--catalog {
+    h1 {
+      font-size: 34px;
+      line-height: 44px;
+      letter-spacing: unset;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 29px;
+    }
   }
 }

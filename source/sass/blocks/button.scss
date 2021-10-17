@@ -15,7 +15,7 @@
 
   &--subscribe {
     position: absolute;
-    padding: 15px 41px 15px 15px;
+    padding: 9px 41px 9px 15px;
     min-width: 118px;
     background-color: transparent;
 
@@ -44,6 +44,11 @@
     padding-bottom: 23px;
     margin-bottom: 25px;
     width: 100%;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 
   &--reset {
@@ -53,6 +58,12 @@
     border: 1px solid $brown-decor;
     background-color: $white-basic;
     color: $black-main;
+
+    &:hover,
+    &:focus {
+      background-color: $brown-decor;
+      color: $white-basic;
+    }
   }
 
   &--close-filter {
@@ -61,6 +72,11 @@
 
   &--main {
     width: 100%;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 
   &--cross {
@@ -72,6 +88,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 14px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 
   &--search {
