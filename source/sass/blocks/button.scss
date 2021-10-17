@@ -3,7 +3,7 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  padding: 28px;
+  padding: 24px;
   background-color: $brown-decor;
   border-style: none;
   border-radius: 0;
@@ -59,8 +59,26 @@
     display: none;
   }
 
-  &--open-filter {
+  &--main {
     width: 100%;
+  }
+
+  &--cross {
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    background-image: url('../img/cross-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14px;
+  }
+
+  &--search {
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
   }
 }
 
@@ -76,7 +94,7 @@
       top: -16px;
       right: -16px;
       border-radius: 50%;
-      background-image: url('../../img/close-filter-icon.svg');
+      background-image: url('../img/close-filter-icon.svg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: 32px;

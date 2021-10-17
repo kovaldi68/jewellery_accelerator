@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Accelerator project: Jewellery">
-  <meta http-equiv="Cache-Control" content="max-age=31536000">
   <title>Web-site Jewellery</title>
   <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/CormorantGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin="">
@@ -22,14 +21,13 @@
     <div class="page-header__container container">
       <button class="page-header__toggle" type="button" aria-label="Открыть или закрыть меню"></button>
       <div class="page-header__search-wrapper">
-        <svg class="page-header__search-icon" width="14" height="14" aria-label="Иконка поиска">
-          <use xlink:href="img/sprite.svg#search-icon">
-          </use>
-        </svg>
-        <input type="text" name="search-input" id="search-input" placeholder="Type here to search">
-        <label class="visually-hidden" for="search-input">Поиск</label>
+        <form class="page-header__search-form">
+          <button class="page-header__search-button" type="submit"></button>
+          <input type="text" name="search-input" id="search-input" placeholder="Type here to search">
+          <label class="visually-hidden" for="search-input">Поиск</label>
+        </form>
       </div>
-      <a class="page-header__logo" href="">
+      <a class="page-header__logo" href="index.html">
         <img src="img/logo.svg" alt="Логотип магазина" width="66" height="66">
       </a>
       <a class="page-header__logo page-header__logo--white" href="">
@@ -43,7 +41,6 @@
           </use>
         </svg>
       </a>
-      
       <ul class="page-header__main-nav main-nav">
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">What’s new</a>
@@ -83,11 +80,11 @@
     </section>
     <div class="page-main__catalog catalog">
       <div class="catalog__container container">
-        <button class="catalog__button button button--open-filter">Filter</button>
-        <div class="catalog__catalog-filter catalog-filter catalog-filter--opened">
+        <button class="catalog__button button button--main button--open-filter">Filter</button>
+        <div class="catalog__catalog-filter catalog-filter">
           <form class="catalog-filter__form" method="get" action="https://echo.htmlacademy.ru">
             <div class="catalog-filter__wrapper catalog-filter__wrapper--accordion">
-              <div class="catalog-filter__item catalog-filter__item--active">
+              <div class="catalog-filter__item catalog-filter__item--product catalog-filter__item--active">
                 <h3 class="catalog-filter__title catalog-filter__title--accord-select">Product</h3>
                 <div class="catalog-filter__content">
                   <ul class="catalog-filter__checkbox filter-checkbox">
@@ -110,7 +107,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="catalog-filter__item">
+              <div class="catalog-filter__item catalog-filter__item--material catalog-filter__item--active">
                 <h3 class="catalog-filter__title">Material</h3>
                 <div class="catalog-filter__content">
                   <ul class="catalog-filter__checkbox filter-checkbox">
@@ -125,7 +122,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="catalog-filter__item">
+              <div class="catalog-filter__item catalog-filter__item--collection catalog-filter__item--active">
                 <h3 class="catalog-filter__title">Collection</h3>
                 <div class="catalog-filter__content">
                   <ul class="catalog-filter__checkbox filter-checkbox">
@@ -147,8 +144,8 @@
                     <div class="price-range__scale">
                       <div class="price-range__bar"></div>
                     </div>
-                    <div id="element-toggle-min" class="price-range__toggle toggle price-range__toggle--min" tabindex="0" aria-price="$&nbsp;55" aria-label="Ползунок минимального левела"></div>
-                    <div id="element-toggle-max" class="price-range__toggle toggle price-range__toggle--max" tabindex="0" aria-price="$&nbsp;155" aria-label="Ползунок максимального левела"></div>
+                    <div id="element-toggle-min" class="price-range__toggle toggle price-range__toggle--min" tabindex="0" data-toggle="$&nbsp;55" aria-label="Ползунок минимального левела"></div>
+                    <div id="element-toggle-max" class="price-range__toggle toggle price-range__toggle--max" tabindex="0" data-toggle="$&nbsp;155" aria-label="Ползунок максимального левела"></div>
                   </div>
                 </div>
               </div>
@@ -383,6 +380,31 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal modal--sign-in">
+    <div class="modal__wrapper">
+      <form class="modal__form form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="form__wrapper">
+          <h2 class="form__title">Log In</h2>
+          <div class="form__input-wrapper form__input-wrapper--email">
+            <input class="form__input form__input--email" type="email" id="user-email" name="user-email" placeholder="Your E-mail" required="">
+            <label class="form__label form__label form__label form__label--email visually-hidden" for="user-email">Email</label>
+          </div>
+          <div class="form__input-wrapper form__input-wrapper--password">
+            <input class="form__input form__input--password" type="password" id="user-password" name="user-password" placeholder="Password" required="">
+            <label class="form__label form__label form__label form__label--password visually-hidden" for="user-password">Password</label>
+            <a href="#">Forgot your password?</a>
+          </div>
+          <button class="form__button button button--main" type="submit" aria-label="Отправить форму с данными для входа">Log In</button>
+          <div class="form__sign-up-text">
+            <p>Don’t have an account? <a href="#">Sign up</a></p>
+          </div>
+        </div>
+      </form>
+      <button class="modal__button-close button button--cross" type="button" aria-label="Нажать, чтобы закрыть модальное окно"></button>
+    </div>
+  </div>
+
   <script src="js/vendors.js"></script>
   <script src="js/main.js"></script>
 </body>

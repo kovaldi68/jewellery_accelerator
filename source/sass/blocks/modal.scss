@@ -1,0 +1,62 @@
+.modal {
+  display: none;
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: $modal-index;
+
+  &--opened {
+    display: block;
+
+    .modal__wrapper {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+}
+
+.modal__wrapper {
+  position: fixed;
+  top: 44%;
+  left: 50%;
+  width: 31.4%;
+  height: 586px;
+  min-width: 430px;
+  max-height: 90vh;
+  z-index: $form-index;
+  background-color: $grey-blog;
+  transform: translate(-50%, -50%);
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media (max-width: $tablet-width-max) {
+  .modal__wrapper {
+    width: 57.5%;
+    min-width: 442px;
+    max-width: 530px;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .modal__wrapper {
+    width: 84.4%;
+    min-width: auto;
+    height: 470px;
+  }
+
+  .modal__button-close {
+    top: 15px;
+    right: 15px;
+  }
+}

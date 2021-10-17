@@ -25,7 +25,7 @@
   transform: translateY(-50%);
 
   &::after {
-    content: attr(aria-price);
+    content: attr(data-toggle);
     position: absolute;
     bottom: -20px;
     left: 50%;
@@ -42,12 +42,4 @@
   &--max {
     left: 59%;
   }
-}
-
-.price-range__toggle--min {
-
-}
-
-.price-range__toggle--max {
-
 }
