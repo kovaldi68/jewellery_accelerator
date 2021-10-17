@@ -52,11 +52,13 @@
 @media (max-width: $mobile-width-max) {
   .subscribe {
     h2 {
-      margin-bottom: 30px;
+      margin-bottom: 12px;
+      width: 80%;
     }
 
     p {
-      margin-bottom: 23px;
+      margin-bottom: 26px;
+      width: 80%;
       line-height: 22px;
     }
   }

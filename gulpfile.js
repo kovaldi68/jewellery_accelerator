@@ -18,7 +18,7 @@ const del = require("del");
 const concat = require('gulp-concat');
 
 gulp.task("scripts", function() {
-  return gulp.src("source/js/*.js")
+  return gulp.src(['source/js/accordion.js', 'source/js/catalog-filter.js', 'source/js/modal.js', 'source/js/header.js', 'source/js/swiper.js'])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js"));
 });
@@ -97,7 +97,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
+    "source/js/vendors.js",
     "source//*.ico"
     ], {
       base: "source"
@@ -118,5 +118,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "scripts", "css", "sprite", "html"));    //не забыть добавить "webp" перед сдачей
+gulp.task("build", gulp.series("clean", "copy", "webp", "scripts", "css", "sprite", "html"));    //не забыть добавить "webp" перед сдачей
 gulp.task("start", gulp.series("build", "server"));

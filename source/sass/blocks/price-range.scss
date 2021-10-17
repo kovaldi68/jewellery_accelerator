@@ -43,3 +43,47 @@
     left: 75%;
   }
 }
+
+@media (max-width: $tablet-width-max) {
+  .price-range__bar {
+    width: 57%;
+    margin-left: 15%;
+  }
+
+  .price-range__toggle {
+    width: 18px;
+    height: 18px;
+
+    &::after {
+      bottom: -28px;
+      left: 50%;
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    &--min {
+      left: 15%;
+    }
+
+    &--max {
+      left: 72%;
+    }
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .price-range__bar {
+    width: 59%;
+    margin-left: 13%;
+  }
+
+  .price-range__toggle {
+    &--min {
+      left: 13%;
+    }
+
+    &--max {
+      left: 72%;
+    }
+  }
+}

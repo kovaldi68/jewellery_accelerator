@@ -72,3 +72,108 @@
     }
   }
 }
+
+@media (max-width: $tablet-width-max) {
+  .promo {
+    background-image: url('../img/intro-main-tablet@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/intro-main-tablet@2x.jpg');
+    }
+
+    &--catalog {
+      background-image: url('../img/intro-catalog-tablet@1x.jpg');
+
+      @media (min-resolution: 2dppx) {
+        background-image: url('../img/intro-catalog-tablet@2x.jpg');
+      }
+    }
+  }
+
+  .promo__container {
+    padding-left: 27px;
+
+    h1 {
+      margin: 0;
+      font-size: 45px;
+      line-height: 53px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0;
+      font-style: italic;
+      font-size: 38px;
+      line-height: 45px;
+      font-weight: 400;
+    }
+
+    &--catalog {
+      padding-left: 45px;
+
+      h1 {
+        font-size: 34px;
+        line-height: 44px;
+        letter-spacing: unset;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 29px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .promo {
+    padding-top: 189px;
+    padding-bottom: 188px;
+    background-image: url('../img/intro-main-mobile@1x.jpg');
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/intro-main-mobile@2x.jpg');
+    }
+
+    &--catalog {
+      padding-top: 79px;
+      padding-bottom: 80px;
+      background-image: url('../img/intro-catalog-mobile@1x.jpg');
+
+      @media (min-resolution: 2dppx) {
+        background-image: url('../img/intro-catalog-mobile@2x.jpg');
+      }
+    }
+  }
+
+  .promo__container {
+    padding-left: 15px;
+
+    h1 {
+      font-size: 38px;
+      line-height: 46px;
+    }
+
+    p {
+      font-size: 34px;
+      line-height: 40px;
+    }
+
+    &--catalog {
+      h1 {
+        font-size: 34px;
+        line-height: 44px;
+        letter-spacing: unset;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 29px;
+      }
+    }
+  }
+}

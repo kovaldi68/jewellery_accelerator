@@ -21,13 +21,13 @@
   .page-footer__container {
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content;
-    row-gap: 50px;
+    row-gap: 46px;
   }
 
   .page-footer__subscribe {
     margin-right: 0;
     padding: 0;
-    width: 85%;
+    width: 83%;
   }
 
   .page-footer__footer-nav {
@@ -37,15 +37,15 @@
 
 @media (max-width: $tablet-width-max) {
   .page-footer {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 30px;
   }
 }
 
 @media (max-width: $mobile-width-max) {
   .page-footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 51px;
+    padding-bottom: 52px;
   }
 
   .page-footer__container {
@@ -54,7 +54,7 @@
 
   .page-footer__subscribe {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .page-footer__footer-nav {

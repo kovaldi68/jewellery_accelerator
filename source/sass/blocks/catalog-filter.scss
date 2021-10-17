@@ -19,6 +19,7 @@
   h3 {
     position: relative;
     margin: 0;
+    font-weight: 500;
     font-size: 16px;
     line-height: 21px;
     cursor: pointer;
@@ -93,11 +94,41 @@
   }
 
   .catalog-filter__item {
-    padding: 40px;
+    padding: 34px 40px 12px 43px;
+
+    &--active {
+      padding-bottom: 36px;
+
+      .catalog-filter__content {
+        &--price {
+          padding-left: 10px;
+          width: 87%;
+        }
+      }
+
+      h3 {
+        margin-bottom: 22px;
+        font-size: 18px;
+        line-height: 23px;
+
+        &::before {
+          width: 25px;
+          height: 15px;
+          background-size: 25px 15px;
+        }
+      }
+    }
+
+    &--price {
+      h3 {
+        margin-bottom: 12px;
+      }
+    }
   }
 
   .catalog-filter__buttons {
     padding: 40px;
+    padding-left: 42px;
   }
 }
 
@@ -113,10 +144,26 @@
   }
 
   .catalog-filter__item {
-    padding: 30px 20px 30px 20px;
+    padding: 25px 20px 24px 20px;
+
+    h3 {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    &--active {
+      padding-bottom: 27px;
+
+      .catalog-filter__content {
+        &--price {
+          padding-left: 0;
+          width: 100%;
+        }
+      }
+    }
   }
 
   .catalog-filter__buttons {
-    padding: 30px 20px 30px 20px;
+    padding: 26px 20px 26px 20px;
   }
 }

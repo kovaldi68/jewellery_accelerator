@@ -132,6 +132,10 @@
 }
 
 @media (max-width: $tablet-width-max) {
+  .blog {
+    padding-bottom: 25px;
+  }
+
   .blog__list {
     display: block;
   }
@@ -153,11 +157,19 @@
       .blog__art-info {
         position: relative;
       }
+
+      .blog__article-link {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
 @media (max-width: $mobile-width-max) {
+  .blog__link {
+    margin-bottom: 49px;
+  }
+
   .blog__item {
     margin: 0 auto 40px auto;
   }
@@ -172,9 +184,16 @@
     .blog__image {
       width: 100%;
     }
+
+    &--article-3 {
+      .blog__article-link {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .blog__art-info {
     width: 100%;
+    min-height: 256px;
   }
 }

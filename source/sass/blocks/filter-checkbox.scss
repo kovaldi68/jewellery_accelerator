@@ -35,3 +35,25 @@
     }
   }
 }
+
+
+@media (max-width: $tablet-width-max) {
+  .filter-checkbox__item {
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      padding-left: 30px;
+      font-size: 16px;
+      line-height: 21px;
+
+      &::before {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

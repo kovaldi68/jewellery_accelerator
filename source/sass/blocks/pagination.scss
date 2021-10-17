@@ -40,13 +40,20 @@
 @media (max-width: $mobile-width-max) {
   .pagination {
     display: block;
+    padding-top: 12px;
+    padding-bottom: 30px;
   }
 
   .pagination__pages-list {
     justify-content: center;
+    margin-left: 0;
   }
 
   .pagination__flip-control {
     display: none;
+  }
+
+  .pagination__pages-item {
+    padding: 7px 11px 6px 11px;
   }
 }
