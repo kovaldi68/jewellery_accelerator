@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Accelerator project: Jewellery">
   <title>Web-site Jewellery</title>
-  <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/CormorantGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/CormorantGaramond-MediumItalic.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-medium-italic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -20,7 +20,7 @@
   <header class="page-header page-header--nojs">
     <div class="page-header__container container">
       <button class="page-header__toggle" type="button" aria-label="Открыть или закрыть меню"></button>
-      <form class="page-header__search-wrapper">
+      <form class="page-header__search-wrapper" method="get" action="https://echo.htmlacademy.ru">
         <button class="page-header__search-button button button--search" type="submit">
           <svg class="page-header__search-icon" width="14" height="14" aria-label="Иконка поиска">
             <use xlink:href="img/sprite.svg#search-icon">
@@ -30,10 +30,10 @@
         <input type="text" name="search-input" id="search-input" placeholder="Type here to search">
         <label class="visually-hidden" for="search-input">Поиск</label>
       </form>
-      <a class="page-header__logo" href="">
+      <a class="page-header__logo">
         <img src="img/logo.svg" alt="Логотип магазина" width="66" height="66">
       </a>
-      <a class="page-header__logo page-header__logo--white" href="">
+      <a class="page-header__logo page-header__logo--white">
         <img src="img/logo-white.svg" alt="Логотип магазина" width="66" height="66">
       </a>
       <a class="page-header__user-link page-header__user-link--login" href="log-in.html">Login</a>
@@ -492,11 +492,11 @@
       <div class="page-footer__subscribe subscribe">
         <h2>The good stuff in your inbox </h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <div class="subscribe__input-wrapper">
+        <form class="subscribe__input-wrapper" method="post" action="https://echo.htmlacademy.ru">
           <input type="email" placeholder="Your E-mail" name="subscribe-email" id="subscribe-email">
           <label class="visually-hidden" for="subscribe-email">Email</label>
-          <button class="subscribe__button button button--subscribe">Sign Up</button>
-        </div>
+          <button class="subscribe__button button button--subscribe" type="submit">Sign Up</button>
+        </form>
       </div>
       <div class="page-footer__footer-nav footer-nav">
         <ul class="footer-nav__menu-list">
