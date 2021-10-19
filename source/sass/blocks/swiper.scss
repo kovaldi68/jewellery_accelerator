@@ -193,6 +193,12 @@ $themeColor: #007aff !default;
   margin-bottom: 60px;
 }
 
+.swiper-wrapper {
+  .swiper-slide {
+    width: 130px;
+  }
+}
+
 .swiper-slide {
   h3 {
     margin: 0;
@@ -249,7 +255,4 @@ $themeColor: #007aff !default;
   .swiper-arrow {
     bottom: 32px;
   }
-}
-
-@media (max-width: $mobile-width-max) {
 }

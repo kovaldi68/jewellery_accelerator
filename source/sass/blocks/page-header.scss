@@ -1,6 +1,18 @@
 .page-header {
+  position: relative;
   padding-top: 30px;
   padding-bottom: 19px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 115px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $grey-border;
+  }
 }
 
 .page-header__container {
@@ -53,7 +65,7 @@
 
 .page-header__logo {
   margin-right: auto;
-  margin-left: 314px;
+  margin-left: auto;
   width: 66px;
   height: 66px;
 
@@ -70,6 +82,7 @@
 
   &--login {
     margin-right: 35px;
+    padding-left: 117px;
   }
 
   &--cart {
@@ -137,6 +150,7 @@
         &--login {
           display: inline-block;
           margin-right: 35px;
+          padding-left: 0;
           font-size: 18px;
           line-height: 23px;
           color: $white-basic;
@@ -212,6 +226,7 @@
         &--login {
           display: inline-block;
           margin-right: 35px;
+          padding-left: 0;
           font-size: 18px;
           line-height: 23px;
           color: $white-basic;
