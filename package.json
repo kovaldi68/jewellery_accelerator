@@ -2,7 +2,7 @@
   "name": "accelerator-project",
   "version": "1.0.0",
   "description": "Макет сайта Jewellery на третьем этапе Акселератора",
-  "eslintIgnore": ["vendors.js", "swiper-bundle.js"],
+  "eslintIgnore": ["vendors.js", "swiper-bundle.js", "source/js/accordion.js", "source/js/catalog-filter.js", "source/js/modal.js", "source/js/header.js", "source/js/swiper.js"],
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
