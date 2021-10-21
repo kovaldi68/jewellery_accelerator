@@ -9,8 +9,9 @@
 }
 
 .page-body {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
   position: relative;
   height: 100%;
   margin: 0;
@@ -20,4 +21,8 @@
   &--modal-opened {
     overflow: hidden;
   }
+}
+
+.page-main {
+  flex: 1;
 }

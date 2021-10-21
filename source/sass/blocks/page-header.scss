@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 30px;
   padding-bottom: 19px;
+  flex: 1;
 
   &::after {
     content: '';
@@ -110,6 +111,10 @@
   .page-header {
     padding-bottom: 30px;
 
+    &::after {
+      display: none;
+    }
+
     .page-header__main-nav {
       display: none;
     }
@@ -125,6 +130,10 @@
       height: 100%;
       overflow-y: auto;
       z-index: 100;
+
+      &::after {
+        display: none;
+      }
 
       .page-header__search-wrapper {
         display: flex;
@@ -201,6 +210,10 @@
       padding-bottom: 80px;
       background-color: $brown-decor;
       overflow-y: auto;
+
+      &::after {
+        display: none;
+      }
 
       .page-header__search-wrapper {
         display: flex;

@@ -3,7 +3,6 @@
   const modalCloseButton = document.querySelector('.modal__button-close');
   const signInButton = document.querySelector('.page-header__user-link--login');
   const signInUserMail = signInModal.querySelector('[name = user-email]');
-  const signInUserPassword = signInModal.querySelector('[name = user-password]');
   const body = document.querySelector('.page-body');
   const pageHeader = document.querySelector('.page-header');
   let focusedElementBeforeModal;

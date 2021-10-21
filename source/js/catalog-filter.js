@@ -10,10 +10,12 @@
   if (catalogFilter) {
     const filterButtonHandler = function() {
       catalogFilter.classList.toggle('catalog-filter--opened');
+      body.classList.toggle('page-body--modal-opened');
     }
 
     const closeFilterHandler = function() {
       catalogFilter.classList.remove('catalog-filter--opened');
+      body.classList.remove('page-body--modal-opened');
     }
 
     const resetFilter = function() {

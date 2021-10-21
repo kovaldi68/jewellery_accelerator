@@ -1,4 +1,4 @@
-(() => {
+(() => { /* eslint-disable no-extra-parens*/
   const faqAccordion = document.querySelector('.faq__questions--accordion');
   const faqContent = document.querySelectorAll('.faq__tab');
 
@@ -59,10 +59,12 @@
   if (catalogFilter) {
     const filterButtonHandler = function() {
       catalogFilter.classList.toggle('catalog-filter--opened');
+      body.classList.toggle('page-body--modal-opened');
     }
 
     const closeFilterHandler = function() {
       catalogFilter.classList.remove('catalog-filter--opened');
+      body.classList.remove('page-body--modal-opened');
     }
 
     const resetFilter = function() {
@@ -86,7 +88,6 @@
   const modalCloseButton = document.querySelector('.modal__button-close');
   const signInButton = document.querySelector('.page-header__user-link--login');
   const signInUserMail = signInModal.querySelector('[name = user-email]');
-  const signInUserPassword = signInModal.querySelector('[name = user-password]');
   const body = document.querySelector('.page-body');
   const pageHeader = document.querySelector('.page-header');
   let focusedElementBeforeModal;
@@ -215,8 +216,7 @@
 })();
 
 (() => {
-  const swiper = new Swiper('.swiper', {
-    // If we need pagination
+  const swiper = new Swiper('.new-in__swiper', {
     pagination: {
       el: '.swiper-pagination',
     },

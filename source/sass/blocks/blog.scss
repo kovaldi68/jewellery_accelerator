@@ -168,6 +168,10 @@
 }
 
 @media (max-width: $mobile-width-max) {
+  .blog {
+    padding-top: 30px;
+  }
+
   .blog__link {
     margin-bottom: 49px;
   }

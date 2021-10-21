@@ -1,8 +1,9 @@
 .page-footer {
-  padding-top: 91px;
+  padding-top: 94px;
   padding-bottom: 73px;
   background-color: $black-basic;
   color: $white-basic;
+  flex-shrink: 0;
 }
 .page-footer__container {
   display: grid;

@@ -1,6 +1,5 @@
 (() => {
-  const swiper = new Swiper('.swiper', {
-    // If we need pagination
+  const swiper = new Swiper('.new-in__swiper', {
     pagination: {
       el: '.swiper-pagination',
     },

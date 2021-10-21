@@ -1,30 +1,22 @@
 .new-in {
   padding-top: 120px;
-  padding-bottom: 65px;
+  padding-bottom: 69px;
 }
 
 .new-in__container {
   text-align: center;
+}
 
-  h2 {
-    margin: 0;
-    margin-bottom: 23px;
-    font-family: $cormorant;
-    font-size: 34px;
-    line-height: 44px;
+@media (max-width: $tablet-width-max) {
+  .new-in {
+    padding-top: 70px;
+    padding-bottom: 10px;
   }
 }
 
-.new-in__link {
-  display: inline-block;
-  line-height: 19px;
-  border-bottom: .5px solid $brown-decor;
-  color: $black-main;
-  vertical-align: middle;
-
-  &:hover,
-  &:focus {
-    color: $brown-decor;
-    border-bottom: 1px solid $black-main;
+@media (max-width: $mobile-width-max) {
+  .new-in {
+    padding-top: 60px;
+    padding-bottom: 10px;
   }
 }
