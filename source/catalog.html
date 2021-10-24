@@ -141,7 +141,7 @@
                 </div>
               </fieldset>
               <fieldset class='catalog-filter__item catalog-filter__item--price catalog-filter__item--active'>
-                <h2 class='catalog-filter__title'>Price</h3>
+                <h2 class='catalog-filter__title'>Price</h2>
                 <div class='catalog-filter__content catalog-filter__content--price'>
                   <div class='catalog-filter__price-range price-range'>
                     <div class='price-range__scale'>
@@ -398,11 +398,11 @@
       <div class='page-footer__subscribe subscribe'>
         <h2>The good stuff in your inbox </h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <div class='subscribe__input-wrapper'>
+        <form class='subscribe__input-wrapper' method='post' action='https://echo.htmlacademy.ru'>
           <input type='email' placeholder='Your E-mail' name='subscribe-email' id='subscribe-email'>
           <label class='visually-hidden' for='subscribe-email'>Email</label>
-          <button class='subscribe__button button button--subscribe'>Sign Up</button>
-        </div>
+          <button class='subscribe__button button button--subscribe' type='submit'>Sign Up</button>
+        </form>
       </div>
       <div class='page-footer__footer-nav footer-nav'>
         <ul class='footer-nav__menu-list'>
@@ -491,7 +491,7 @@
             <label class='form__label form__label form__label form__label--email visually-hidden' for='user-email'>Email</label>
           </div>
           <div class='form__input-wrapper form__input-wrapper--password'>
-            <input class='form__input form__input--password' type='password' id='user-password' name='user-password' placeholder='Password' required>
+            <input class='form__input form__input--password' type='password' id='user-password' name='user-password' autocomplete='current-password' placeholder='Password' required>
             <label class='form__label form__label form__label form__label--password visually-hidden' for='user-password'>Password</label>
             <a href='#'>Forgot your password?</a>
           </div>

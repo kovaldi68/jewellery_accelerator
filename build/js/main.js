@@ -1,4 +1,4 @@
-(() => { /* eslint-disable no-extra-parens*/
+(() => {
   const faqAccordion = document.querySelector('.faq__questions--accordion');
   const faqContent = document.querySelectorAll('.faq__tab');
 
