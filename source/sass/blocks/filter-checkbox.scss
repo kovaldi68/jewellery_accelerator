@@ -34,10 +34,18 @@
       background-color: $brown-decor;
     }
   }
+
+  input:focus + label {
+    outline: 1px solid $grey-main;
+  }
 }
 
 
 @media (max-width: $tablet-width-max) {
+  .filter-checkbox {
+    padding-top: 2px;
+  }
+
   .filter-checkbox__item {
     margin-bottom: 14px;
 

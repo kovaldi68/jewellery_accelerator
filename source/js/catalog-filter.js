@@ -5,7 +5,6 @@
   const resetFilterButton = document.querySelector('.button--reset');
   const catalogItems = document.querySelectorAll('.catalog-filter__item');
   const body = document.querySelector('.page-body');
-  const tabletMedia = window.matchMedia('(max-width: 1023px)');
 
   if (catalogFilter) {
     const filterButtonHandler = function() {

@@ -12,11 +12,11 @@
 
     if (pageHeader.classList.contains('page-header--opened')) {
       pageHeader.classList.remove('page-header--opened')
-      body.classList.remove('page-body--menu-opened')
+      body.classList.remove('page-body--modal-opened')
       body.style.paddingTop = 0;
     } else {
       pageHeader.classList.add('page-header--opened')
-      body.classList.add('page-body--menu-opened')
+      body.classList.add('page-body--modal-opened')
       body.style.paddingTop = `${headerHeight}px`;
     }
   };
@@ -25,7 +25,7 @@
     if (mediaDesktop.matches) {
       body.style.paddingTop = 0;
       pageHeader.classList.remove('page-header--opened');
-      body.classList.remove('page-body--menu-opened')
+      body.classList.remove('page-body--modal-opened');
     }
   };
 

@@ -18,7 +18,7 @@ const del = require("del");
 const concat = require('gulp-concat');
 
 gulp.task("scripts", function() {
-  return gulp.src(['source/js/accordion.js', 'source/js/catalog-filter.js', 'source/js/modal.js', 'source/js/header.js', 'source/js/swiper.js'])
+  return gulp.src(['source/js/accordion.js', 'source/js/catalog-filter.js', 'source/js/header.js', 'source/js/modal.js', 'source/js/swiper.js'])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js"));
 });

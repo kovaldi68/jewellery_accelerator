@@ -33,6 +33,7 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 0;
+    margin-left: 0;
     font-size: 24px;
     line-height: 36px;
     color: $white-basic;
@@ -40,7 +41,7 @@
 
   .main-nav__item {
     margin-right: 0;
-    margin-bottom: 40px;
+    margin-bottom: 21px;
 
     &:last-child {
       margin-bottom: 0;

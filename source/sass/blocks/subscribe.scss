@@ -1,7 +1,7 @@
 .subscribe {
   h2 {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     font-family: $cormorant;
     font-weight: 700;
     font-size: 34px;
@@ -11,7 +11,7 @@
 
   p {
     margin: 0;
-    margin-bottom: 27px;
+    margin-bottom: 28px;
     font-weight: 400;
     line-height: 21px;
     color: $grey-main;
@@ -47,6 +47,14 @@
 .subscribe__button {
   bottom: 0;
   right: 0;
+}
+
+@media (max-width: $tablet-width-max) {
+  .subscribe {
+    p {
+      margin-bottom: 32px;
+    }
+  }
 }
 
 @media (max-width: $mobile-width-max) {

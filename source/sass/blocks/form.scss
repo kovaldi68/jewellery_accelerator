@@ -28,15 +28,15 @@
       background-image: url('../img/intro-logIn-desktop@2x.jpg');
     }
   }
-}
 
-.form__title {
-  margin: 0;
-  margin-bottom: 23px;
-  font-family: $cormorant;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 44px;
+  h2 {
+    margin: 0;
+    margin-bottom: 23px;
+    font-family: $cormorant;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 44px;
+  }
 }
 
 .form__input-wrapper {
@@ -48,6 +48,7 @@
     line-height: 21px;
     background-color: transparent;
     border: none;
+    border-radius: 0;
     border-bottom: 1px solid $black-main;
     outline: none;
 
@@ -114,7 +115,7 @@
 
 @media (max-width: $mobile-width-max) {
   .form__wrapper {
-    padding: 129px 15px 45px 15px;
+    padding: 121px 15px 40px 15px;
 
     &::before {
       height: 84px;
@@ -124,6 +125,22 @@
       @media (min-resolution: 2dppx) {
         background-image: url('../img/intro-logIn-mobile@2x.jpg');
       }
+    }
+
+    h2 {
+      margin-bottom: 17px;
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+
+  .form__input-wrapper {
+    &--email {
+      margin-bottom: 20px;
+    }
+
+    &--password {
+      margin-bottom: 34px;
     }
   }
 }

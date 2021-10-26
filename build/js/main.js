@@ -1,6 +1,24 @@
 (() => {
   const faqAccordion = document.querySelector('.faq__questions--accordion');
   const faqContent = document.querySelectorAll('.faq__tab');
+  const faqTitles = document.querySelectorAll('.faq__title');
+
+  const isEnterEvent = (evt) => {
+    return evt.code === ('Enter');
+  };
+
+  const onEnterFaqHandler = (event) => {
+    const eventTarget = event.target;
+    if (isEnterEvent(event)) {
+      if (eventTarget.classList.contains('faq__title--accord-select')) {
+        eventTarget.classList.remove('faq__title--accord-select');
+        eventTarget.closest('.faq__tab').classList.remove('faq__tab--active');
+      } else {
+        eventTarget.classList.add('faq__title--accord-select');
+        eventTarget.closest('.faq__tab').classList.add('faq__tab--active');
+      }
+    }
+  }
 
   if (faqAccordion) {
     faqContent.forEach(element => element.classList.remove('faq__tab--active'));
@@ -8,8 +26,8 @@
 
     function faqAccordionHandler(event) {
       const eventTarget = event.target;
-      if(!(eventTarget.classList.contains('faq__title'))) return;
-      if (eventTarget.classList.contains('faq__title--accord-select')) {
+      if(!(eventTarget.classList.contains('faq__tab') || (eventTarget.classList.contains('faq__title')))) return;
+      if (eventTarget.classList.contains('faq__tab--active') || (eventTarget.classList.contains('faq__title--accord-select'))) {
         eventTarget.classList.remove('faq__title--accord-select');
         eventTarget.closest('.faq__tab').classList.remove('faq__tab--active');
       } else {
@@ -21,9 +39,22 @@
     faqAccordion.addEventListener('click', faqAccordionHandler);
   }
 
-
   const filterAccordion = document.querySelector('.catalog-filter__wrapper--accordion');
   const filterContent = document.querySelectorAll('.catalog-filter__item');
+  const filterTitles = document.querySelectorAll('.catalog-filter__title');
+
+  const onEnterFilterHandler = (event) => {
+    const eventTarget = event.target;
+    if (isEnterEvent(event)) {
+      if (eventTarget.classList.contains('catalog-filter__title--accord-select')) {
+        eventTarget.classList.remove('catalog-filter__title--accord-select');
+        eventTarget.closest('.catalog-filter__item').classList.remove('catalog-filter__item--active');
+      } else {
+        eventTarget.classList.add('catalog-filter__title--accord-select');
+        eventTarget.closest('.catalog-filter__item').classList.add('catalog-filter__item--active');
+      }
+    }
+  }
 
   if (filterAccordion) {
     const filterItemsArray = Array.from(filterContent);
@@ -33,8 +64,8 @@
 
     function filterAccordionHandler(event) {
       const eventTarget = event.target;
-      if(!(eventTarget.classList.contains('catalog-filter__title'))) return;
-      if (eventTarget.classList.contains('catalog-filter__title--accord-select')) {
+      if(!(eventTarget.classList.contains('catalog-filter__item') || (eventTarget.classList.contains('catalog-filter__title')))) return;
+      if (eventTarget.classList.contains('catalog-filter__item--active') || eventTarget.classList.contains('catalog-filter__title--accord-select')) {
         eventTarget.classList.remove('catalog-filter__title--accord-select');
         eventTarget.closest('.catalog-filter__item').classList.remove('catalog-filter__item--active');
       } else {
@@ -42,9 +73,11 @@
         eventTarget.closest('.catalog-filter__item').classList.add('catalog-filter__item--active');
       }
     }
-
     filterAccordion.addEventListener('click', filterAccordionHandler);
   }
+
+  faqTitles.forEach(element => element.addEventListener('keydown', onEnterFaqHandler));
+  filterTitles.forEach(element => element.addEventListener('keydown', onEnterFilterHandler));
 })();
 
 (() => {
@@ -54,7 +87,6 @@
   const resetFilterButton = document.querySelector('.button--reset');
   const catalogItems = document.querySelectorAll('.catalog-filter__item');
   const body = document.querySelector('.page-body');
-  const tabletMedia = window.matchMedia('(max-width: 1023px)');
 
   if (catalogFilter) {
     const filterButtonHandler = function() {
@@ -90,6 +122,7 @@
   const signInUserMail = signInModal.querySelector('[name = user-email]');
   const body = document.querySelector('.page-body');
   const pageHeader = document.querySelector('.page-header');
+  const mediaDesktop = window.matchMedia('(min-width: 1024px)');
   let focusedElementBeforeModal;
 
   let isStorageSupport = true;
@@ -181,6 +214,7 @@
 })();
 
 (() => {
+  const signInModal = document.querySelector('.modal--sign-in');
   const pageHeader = document.querySelector('.page-header');
   const menuToggle = document.querySelector('.page-header__toggle');
   const mediaDesktop = window.matchMedia('(min-width: 1024px)');
@@ -194,11 +228,11 @@
 
     if (pageHeader.classList.contains('page-header--opened')) {
       pageHeader.classList.remove('page-header--opened')
-      body.classList.remove('page-body--menu-opened')
+      body.classList.remove('page-body--modal-opened')
       body.style.paddingTop = 0;
     } else {
       pageHeader.classList.add('page-header--opened')
-      body.classList.add('page-body--menu-opened')
+      body.classList.add('page-body--modal-opened')
       body.style.paddingTop = `${headerHeight}px`;
     }
   };
@@ -207,65 +241,74 @@
     if (mediaDesktop.matches) {
       body.style.paddingTop = 0;
       pageHeader.classList.remove('page-header--opened');
-      body.classList.remove('page-body--menu-opened')
+      body.classList.remove('page-body--modal-opened');
+    }
+  };
+
+  const keepModalOpen = () => {
+    if (mediaDesktop.matches && signInModal.classList.contains('modal--opened')) {
+      body.classList.add('page-body--modal-opened');
     }
   };
 
   menuToggle.addEventListener('click', onMenuHandler);
   window.addEventListener('resize', closeHeader);
+  window.addEventListener('resize', keepModalOpen);
 })();
 
 (() => {
-  const swiper = new Swiper('.new-in__swiper', {
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    navigation: {
-      nextEl: '.swiper-arrow--next',
-      prevEl: '.swiper-arrow--prev',
-    },
-
-
-    simulateTouch: false,
-    spaceBetween: 30,
-    loop: true,
-
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        pagination: {
-          type: 'fraction',
-          renderFraction: function(currentClass, totalClass) {
-            return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
-          }
-        },
-        grabCursor: true,
+  if(document.querySelector('.new-in__swiper')) {
+    const swiper = new Swiper('.new-in__swiper', {
+      pagination: {
+        el: '.swiper-pagination',
       },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        pagination: {
-          type: 'bullets',
-          clickable: true,
-          renderBullet: function(index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          }
-        },
-        grabCursor: true,
+
+      navigation: {
+        nextEl: '.swiper-arrow--next',
+        prevEl: '.swiper-arrow--prev',
       },
-      1023: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        pagination: {
-          type: 'bullets',
-          clickable: true,
-          renderBullet: function(index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          }
+
+
+      simulateTouch: false,
+      spaceBetween: 30,
+      loop: true,
+
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            type: 'fraction',
+            renderFraction: function(currentClass, totalClass) {
+              return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+            }
+          },
+          grabCursor: true,
         },
-      },
-    }
-  });
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            type: 'bullets',
+            clickable: true,
+            renderBullet: function(index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+          },
+          grabCursor: true,
+        },
+        1023: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          pagination: {
+            type: 'bullets',
+            clickable: true,
+            renderBullet: function(index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+          },
+        },
+      }
+    });
+  }
 })();

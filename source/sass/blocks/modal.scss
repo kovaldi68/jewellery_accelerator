@@ -36,15 +36,14 @@
 
 .modal__button-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 17px;
+  right: 17px;
 }
 
 @media (max-width: $tablet-width-max) {
   .modal__wrapper {
     width: 57.5%;
-    min-width: 442px;
-    max-width: 530px;
+    max-width: 480px;
   }
 }
 
@@ -53,10 +52,11 @@
     width: 84.4%;
     min-width: auto;
     height: 470px;
+    max-width: 370px;
   }
 
   .modal__button-close {
-    top: 15px;
-    right: 15px;
+    top: 12px;
+    right: 12px;
   }
 }

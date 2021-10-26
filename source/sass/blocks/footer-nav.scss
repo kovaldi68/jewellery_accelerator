@@ -72,11 +72,23 @@
   }
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1205px) {
   .footer-nav__menu-subitem {
     &:nth-child(2n) {
       margin-left: auto;
       margin-right: auto;
+      padding-left: 55px;
+    }
+  }
+
+  .footer-nav__social-list {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .footer-nav__menu-subitem {
+    &:nth-child(2n) {
       padding-left: 73px;
     }
   }

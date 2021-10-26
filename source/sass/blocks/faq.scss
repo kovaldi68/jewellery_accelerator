@@ -26,6 +26,7 @@
 .faq__tab {
   padding: 43px 43px 43px 42px;
   border-bottom: 1px solid $brown-decor;
+  cursor: pointer;
 
   h3 {
     position: relative;
@@ -33,7 +34,6 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 23px;
-    cursor: pointer;
 
     &::before {
       content: '';
@@ -79,7 +79,6 @@
       height: min-content;
       padding-left: 7px;
       width: 60%;
-      transition: $transition-time-slow;
     }
   }
 }

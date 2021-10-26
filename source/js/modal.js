@@ -5,6 +5,7 @@
   const signInUserMail = signInModal.querySelector('[name = user-email]');
   const body = document.querySelector('.page-body');
   const pageHeader = document.querySelector('.page-header');
+  const mediaDesktop = window.matchMedia('(min-width: 1024px)');
   let focusedElementBeforeModal;
 
   let isStorageSupport = true;
@@ -91,6 +92,13 @@
     }
   }
 
+  const keepModalOpen = () => {
+    if (mediaDesktop.matches && signInModal.classList.contains('modal--opened')) {
+      body.classList.add('page-body--modal-opened');
+    }
+  };
+
+  window.addEventListener('resize', keepModalOpen);
   signInButton.addEventListener('click', modalHandler);
   modalCloseButton.addEventListener('click', signInModalHandler);
 })();

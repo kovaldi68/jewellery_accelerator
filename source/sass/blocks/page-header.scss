@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 30px;
   padding-bottom: 19px;
-  flex: 1;
+  margin-bottom: auto;
 
   &::after {
     content: '';
@@ -138,7 +138,7 @@
       .page-header__search-wrapper {
         display: flex;
         margin-top: 40px;
-        margin-bottom: 55px;
+        margin-bottom: 44px;
         background-color: $white-basic-opacity-15;
         width: 100%;
         order: 4;
@@ -174,7 +174,7 @@
 
       .page-header__main-nav {
         display: block;
-        margin-bottom: 55px;
+        margin-bottom: 39px;
         order: 5;
       }
 
@@ -188,7 +188,7 @@
 
       .page-header__hidden-nav {
         display: flex;
-        margin-bottom: 55px;
+        margin-bottom: 33px;
         order: 6;
       }
 
@@ -218,7 +218,7 @@
       .page-header__search-wrapper {
         display: flex;
         margin-top: 40px;
-        margin-bottom: 55px;
+        margin-bottom: 44px;
         background-color: $white-basic-opacity-15;
         width: 100%;
         order: 4;
@@ -254,7 +254,7 @@
 
       .page-header__main-nav {
         display: block;
-        margin-bottom: 55px;
+        margin-bottom: 39px;
         order: 5;
       }
 
@@ -268,7 +268,7 @@
 
       .page-header__hidden-nav {
         display: flex;
-        margin-bottom: 55px;
+        margin-bottom: 33px;
         order: 6;
       }
 
@@ -311,6 +311,7 @@
 
     input {
       padding-right: 15px;
+      padding-left: 20px;
       width: 100%;
       color: $white-basic;
 
@@ -362,15 +363,15 @@
 
       .page-header__search-wrapper {
         margin-top: 30px;
-        margin-bottom: 45px;
+        margin-bottom: 33px;
       }
 
       .page-header__main-nav {
-        margin-bottom: 45px;
+        margin-bottom: 30px;
       }
 
       .page-header__hidden-nav {
-        margin-bottom: 45px;
+        margin-bottom: 23px;
       }
     }
 
@@ -380,15 +381,15 @@
 
       .page-header__search-wrapper {
         margin-top: 30px;
-        margin-bottom: 45px;
+        margin-bottom: 33px;
       }
 
       .page-header__main-nav {
-        margin-bottom: 45px;
+        margin-bottom: 30px;
       }
 
       .page-header__hidden-nav {
-        margin-bottom: 45px;
+        margin-bottom: 23px;
       }
     }
   }
