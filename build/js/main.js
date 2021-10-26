@@ -88,6 +88,13 @@
   const catalogItems = document.querySelectorAll('.catalog-filter__item');
   const body = document.querySelector('.page-body');
 
+  const focusableElementString = 'a[href], area[href],input:not([disabled]):not([type="hidden"]):not([aria-hidden]), select:not([disabled]):not([aria-hidden]), textarea:not([disabled]):not([aria-hidden]), button:not([disabled]):not([aria-hidden]), iframe, object, embed, [contenteditable], [tabindex]:not([tabindex^="-"])';
+  const focusableElements = catalogFilter.querySelectorAll(focusableElementString);
+  const focusableElementsArray = Array.from(focusableElements);
+  const firstTabStop = focusableElementsArray[0];
+  const lastTabStop = focusableElementsArray[focusableElementsArray.length - 1];
+  const mediaTablet = window.matchMedia('(max-width: 1023px)');
+
   if (catalogFilter) {
     const filterButtonHandler = function() {
       catalogFilter.classList.toggle('catalog-filter--opened');
@@ -109,10 +116,65 @@
       });
     }
 
+    const trapTabKey = function(e) {
+      if (mediaTablet.matches) {
+        if (e.keyCode === 9) {
+          if (e.shiftKey) {
+            if (document.activeElement === firstTabStop) {
+              e.preventDefault();
+              lastTabStop.focus();
+            }
+          } else {
+            if (document.activeElement === lastTabStop) {
+              e.preventDefault();
+              firstTabStop.focus();
+            }
+          }
+        }
+      }
+    }
+
+
     openFilterButton.addEventListener('click', filterButtonHandler);
     closeFilterButton.addEventListener('click', closeFilterHandler);
     resetFilterButton.addEventListener('click', resetFilter);
+    catalogFilter.addEventListener('keydown', trapTabKey);
   }
+})();
+
+(() => {
+  const pageHeader = document.querySelector('.page-header');
+  const menuToggle = document.querySelector('.page-header__toggle');
+  const mediaDesktop = window.matchMedia('(min-width: 1024px)');
+  const body = document.body;
+
+  pageHeader.classList.remove('page-header--nojs');
+
+  const onMenuHandler = (evt) => {
+    evt.preventDefault();
+    const headerHeight = pageHeader.offsetHeight;
+
+    if (pageHeader.classList.contains('page-header--opened')) {
+      pageHeader.classList.remove('page-header--opened')
+      body.classList.remove('page-body--modal-opened')
+      body.style.paddingTop = 0;
+    } else {
+      pageHeader.classList.add('page-header--opened')
+      body.classList.add('page-body--modal-opened')
+      body.style.paddingTop = `${headerHeight}px`;
+    }
+  };
+
+  const closeHeader = () => {
+    if (mediaDesktop.matches) {
+      body.style.paddingTop = 0;
+      pageHeader.classList.remove('page-header--opened');
+      body.classList.remove('page-body--modal-opened');
+    }
+  };
+
+  menuToggle.addEventListener('click', onMenuHandler);
+  window.addEventListener('resize', closeHeader);
 })();
 
 (() => {
@@ -209,51 +271,15 @@
     }
   }
 
-  signInButton.addEventListener('click', modalHandler);
-  modalCloseButton.addEventListener('click', signInModalHandler);
-})();
-
-(() => {
-  const signInModal = document.querySelector('.modal--sign-in');
-  const pageHeader = document.querySelector('.page-header');
-  const menuToggle = document.querySelector('.page-header__toggle');
-  const mediaDesktop = window.matchMedia('(min-width: 1024px)');
-  const body = document.body;
-
-  pageHeader.classList.remove('page-header--nojs');
-
-  const onMenuHandler = (evt) => {
-    evt.preventDefault();
-    const headerHeight = pageHeader.offsetHeight;
-
-    if (pageHeader.classList.contains('page-header--opened')) {
-      pageHeader.classList.remove('page-header--opened')
-      body.classList.remove('page-body--modal-opened')
-      body.style.paddingTop = 0;
-    } else {
-      pageHeader.classList.add('page-header--opened')
-      body.classList.add('page-body--modal-opened')
-      body.style.paddingTop = `${headerHeight}px`;
-    }
-  };
-
-  const closeHeader = () => {
-    if (mediaDesktop.matches) {
-      body.style.paddingTop = 0;
-      pageHeader.classList.remove('page-header--opened');
-      body.classList.remove('page-body--modal-opened');
-    }
-  };
-
   const keepModalOpen = () => {
     if (mediaDesktop.matches && signInModal.classList.contains('modal--opened')) {
       body.classList.add('page-body--modal-opened');
     }
   };
 
-  menuToggle.addEventListener('click', onMenuHandler);
-  window.addEventListener('resize', closeHeader);
   window.addEventListener('resize', keepModalOpen);
+  signInButton.addEventListener('click', modalHandler);
+  modalCloseButton.addEventListener('click', signInModalHandler);
 })();
 
 (() => {
